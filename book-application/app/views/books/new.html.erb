@@ -1,0 +1,18 @@
+
+<%= form_with scope: :book, local: true do |book| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :author %><br>
+    <%= form.text_area :text %>
+  </p>
+ 
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+

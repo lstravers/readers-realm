@@ -9,10 +9,9 @@ require 'faker'
 
 50.times do
   Book.create(
-    title: Faker::Book.title
-    author: Faker::Book.author
-    description: Faker::Book.description
-    url: Faker::Book.url
-    text
-end
+    title: Faker::Book.title,
+    author: Faker::Book.author,
+    # description: Faker::Book.description,
+    # url: Faker::Book.url
   )
+  end
