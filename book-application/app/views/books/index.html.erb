@@ -5,8 +5,6 @@
 <%= link_to 'Add a New Book', new_book_path %>
 <br>
 
-
-
 <table class = "table">
   <tr>
     <th>Title</th>
@@ -22,7 +20,10 @@
       <td><%= book.description %></td>
       <td><%= book.url %></td>
       <td><%= link_to 'Show', book_path(book) %></td>
-      <td><%= link_to 'Edit', edit_book_path(book.id) %></td> 
+      <td><%= link_to 'Edit', edit_book_path(book.id) %></td>
+      <td><%= link_to 'Delete', book_path(book), 
+                                          method: :delete,
+                                          data: {confirm: 'Are you sure? Deleting this book will permanently remove it from the library.'} %></td> 
     </tr>
   <% end %>
 </table>
