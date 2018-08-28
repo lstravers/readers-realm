@@ -4,9 +4,21 @@
 
 <table class = "table">
   <tr>
-  <th>Title</th>
-  <th>Author</th> 
-  <th>URL</th>
+    <th>Title</th>
+    <th>Author</th> 
+    <th>URL</th>
+    <th>Description</th>
   </tr>
 
+  <% @books.each do |book| %>
+    <tr>
+      <td><%= book.title %></td>
+      <td><%= book.author %></td>
+      <td><%= book.description %></td>
+      <td><%= book.url %></td>
+      <td><%= link_to 'Show', book_path(book) %></td>
+    </tr>
+  <% end %>
 </table>
+
+<button>Add a Book</button>
