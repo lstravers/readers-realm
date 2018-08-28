@@ -10,8 +10,9 @@ class BooksController < ApplicationController
   def new
   end
 
-  # def edit
-  # end
+  def edit
+    @book = Book.find(params[:id])
+  end
 
   def create
     @book = Book.new(book_params)

@@ -1,7 +1,5 @@
-<h1>Add a New Book</h1>
 
-
-<%= form_with scope: :book, url: books_path, local: true do |form| %>
+<%= form_with model: :book, url: books_path, local: true do |form| %>
   <p>
     <%= form.label :Title %><br>
     <%= form.text_field :title %>
@@ -26,4 +24,3 @@
     <%= form.submit %>
   </p>
 <% end %>
-
