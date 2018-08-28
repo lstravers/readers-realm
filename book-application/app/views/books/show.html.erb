@@ -1,4 +1,4 @@
-<h2>Saved Book Information</h2>
+<h3 class = "h3">Confirmed: the book has been saved/updated.</h3>
 
 <p>
   <strong>Title:</strong>
@@ -19,3 +19,6 @@
   <strong>Description:</strong>
   <%= @book.description %>
 </p>
+
+<%= link_to 'Edit', edit_book_path(@book) %>
+<%= link_to '<<back', books_path %>
