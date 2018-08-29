@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   
   get 'books/index'
   post '/books/new'
+
+  resources :books do
+    resources :users
+  end
   
 
 
