@@ -20,39 +20,20 @@
   <%= @book.description %>
 </p>
 
-# <h2>Users</h2>
-# <% @book.users.each do |user| %>
-#   <p>
-#     <strong>User:</strong>
-#     <%= user.users %>
-#   </p>
- 
-#   <p>
-#     <strong>User:</strong>
-#     <%= user.body %>
-#   </p>
-# <% end %>
-
-
-
-# <h3>Add a user:</h3>
-# <%= form_with(model: [ @book, @book.users.build ], local: true) do |form| %>
-#   <p>
-#     <%= form.label :User %><br>
-#     <%= form.text_field :user %>
-#   </p>
-#   <p>
-#     <%= form.label :body %><br>
-#     <%= form.text_area :body %>
-#   </p>
+<h2>Users</h2>
 
   <p>
-    <%= form.submit %>
+    <strong>User:</strong>
+    <%= @book.user.user %>
   </p>
-<% end %>
+ 
+  <p>
+    <strong>User:</strong>
+    <%= @book.user.body %>
+  </p>
 
 <%= link_to 'edit', edit_book_path(@book) %>
 <br>
-<%= link_to '<< back to books', books_path %>
+<%= link_to '<< back to books', books_path, class: "button" %>
 <br>
-<%= link_to '+ add another book', new_book_path %>
+<%= link_to '+ add another book', new_book_path, class: "button" %>

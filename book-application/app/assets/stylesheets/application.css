@@ -15,3 +15,15 @@
  */
 
  @import "bootstrap";
+
+ .button {
+  background-color: gray; 
+  color: white;
+   border-radius: 5px;
+   text-decoration: none;
+   text-align: center;
+   padding: 1px;
+   border: 2px solid black;
+   margin: 5px;
+
+ }

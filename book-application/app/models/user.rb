@@ -1,7 +1,6 @@
 class User < ApplicationRecord
-  belongs_to :book
+  has_many :books
 
-  has_many :users
-  validates :name, presence: true,
-                    length: { minimum: 3 }
+  # validates :name, presence: true,
+  #                   length: { minimum: 3 }
 end

@@ -8,10 +8,15 @@
 require 'faker'
 
 50.times do
+  User.create(user: Faker::Internet.username, body: Faker::MichaelScott.quote)
+end
+
+50.times do
   Book.create(
     title: Faker::Book.title,
     author: Faker::Book.author,
-    # description: Faker::Book.description,
-    # url: Faker::Book.url
+    description: Faker::Zelda.game,
+    url: Faker::Internet.url,
+    user_id: rand(1..User.all.count)
   )
   end

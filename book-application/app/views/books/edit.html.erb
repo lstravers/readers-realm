@@ -1,7 +1,5 @@
 <h1>Edit Book Info</h1>
 
-
-
 <%= form_with(model: @book, local: true) do |form| %>
  
   <% if @book.errors.any? %>
@@ -44,4 +42,4 @@
  
 <% end %>
  
-<%= link_to '<< back to book list <<', books_path %>
+<%= link_to '<< back to book list', books_path %>
