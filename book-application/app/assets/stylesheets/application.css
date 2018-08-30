@@ -17,13 +17,13 @@
  @import "bootstrap";
 
  .button {
-  background-color: gray; 
+  background-color: blueviolet; 
   color: white;
-   border-radius: 5px;
    text-decoration: none;
    text-align: center;
-   padding: 1px;
-   border: 2px solid black;
-   margin: 5px;
-
+   padding: none;
+   border: 1px solid black;
+   margin: 10px;
+   display: inline-block;
+   font-size: small
  }

@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   root 'books#index'
   
-  resources :books do
-    resources :users
-  end
+  resources :books
+
+  resources :users
   
   get 'books/index'
   post '/books/new'

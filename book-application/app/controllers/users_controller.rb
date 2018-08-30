@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  def new
+  end
+
   def create
     @book = Book.find(params[:book_id])
     @user = 
@@ -11,6 +14,4 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:user, :body)
     end
-end
-
 end
