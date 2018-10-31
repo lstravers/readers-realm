@@ -1,19 +1,17 @@
-<h1><center>Welcome to the Library</center></h1>
+<h1 class="header">Welcome to the Reader's Realm</h1>
+<h3 class="header"> - - A sample book library utilizing seed data - - </h3>
 
-<h2>Book List</h2>
+<%= link_to 'Add New Book', new_book_path, class: "button" %> <br>
 
-<%= link_to 'Add New Book', new_book_path, class: "button" %>
-<br>
-
-<%= link_to 'Add New User', new_user_path, class: "button" %>
-<br>
+<%= link_to 'Add New Reader', new_user_path, class: "button" %> <br>
 
 <table class = "table">
   <tr>
     <th>Title</th>
     <th>Author</th>
-    <th>URL</th>
     <th>Description</th>
+    <th>URL</th>
+    <th>Actions</th>
   </tr>
 
   <% @books.each do |book| %>
