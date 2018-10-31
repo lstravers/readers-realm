@@ -1,0 +1,39 @@
+<h3 class = "h3">Confirmed: the book has been saved/updated.</h3>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+ 
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>URL:</strong>
+  <%= @book.url %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+
+<h2>Users</h2>
+
+  <p>
+    <strong>User:</strong>
+    <%= @book.user.user %>
+  </p>
+ 
+  <p>
+    <strong>User:</strong>
+    <%= @book.user.body %>
+  </p>
+
+<%= link_to 'edit', edit_book_path(@book) %>
+<br>
+<%= link_to '<< back to books', books_path, class: "button" %>
+<br>
+<%= link_to '+ add another book', new_book_path, class: "button" %>

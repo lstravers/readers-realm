@@ -1,0 +1,44 @@
+<h1>Add a New Book</h1>
+
+<%= form_with scope: :book, url: books_path, local: true do |form| %>
+  
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h3>
+        <%= pluralize(@book.errors.count, "error") %> prohibited
+        this book from being saved:
+      </h3>
+      <ul>
+        <% @book.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+  <p>
+    <%= form.label :Title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :Author %><br>
+    <%= form.text_field :author %>
+  </p>
+ 
+  <p>
+  <%= form.label :Description %><br>
+  <%= form.text_area :description %>
+</p>
+
+<p>
+<%= form.label :url %><br>
+<%= form.text_field :url %>
+</p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+

@@ -1,0 +1,23 @@
+// Place all the styles related to the Books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.table {
+  border: solid gray 1px;
+}
+
+.body {
+  background-color: aliceblue;
+  font-size: 14px;
+}
+
+.h3 {
+color: green;
+}
+
+#error_explanation {
+  border: solid red 4px;
+  color: red;
+}
+
