@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-50.times do
+10.times do
   User.create(user: Faker::Internet.username, body: Faker::MichaelScott.quote)
 end
 
-50.times do
+10.times do
   Book.create(
     title: Faker::Book.title,
     author: Faker::Book.author,

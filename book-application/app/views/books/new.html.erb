@@ -1,4 +1,4 @@
-<h1>Add a New Book</h1>
+<h1>Add a New Book to the Realm</h1>
 
 <%= form_with scope: :book, url: books_path, local: true do |form| %>
   
@@ -15,7 +15,6 @@
       </ul>
     </div>
   <% end %>
-  
   
   <p>
     <%= form.label :Title %><br>
@@ -41,4 +40,6 @@
     <%= form.submit %>
   </p>
 <% end %>
+
+<%= link_to 'Back', root_path %>
 

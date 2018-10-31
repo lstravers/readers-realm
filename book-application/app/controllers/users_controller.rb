@@ -1,17 +1,24 @@
 class UsersController < ApplicationController
 
+  def index
+  @user = User.all
+  end
+  
   def new
+    @user = User.new
   end
 
   def create
-    @book = Book.find(params[:book_id])
-    @user = 
-  @book.users.create(user_params)
-    redirect_to book_path(@book)
+  @user = User.new(user_params)
+  if @user.save
+    redirect_to new_session_path, notice: "You sucessfully created a new reader."
+  else
+    render 'Denied'
   end
+end
  
   private
     def user_params
-      params.require(:user).permit(:user, :body)
+      params.require(:user, :password).permit(:user, :password)
     end
 end
