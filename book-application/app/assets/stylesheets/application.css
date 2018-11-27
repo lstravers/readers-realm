@@ -29,7 +29,8 @@
   text-align: center;
   margin: 10px;
   display: inline-block;
-  font-size: small
+  font-size: small;
+  padding: 4px 5px;
  }
 
  .header {
